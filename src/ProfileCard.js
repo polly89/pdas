@@ -1,10 +1,24 @@
 import React from 'react'
 
-function ProfileCard({ title, handle }) { // This is equivilant to passing props.title & props.handle.
+function ProfileCard({ title, handle, img, description }) { // This is equivilant to passing props.title & props.handle.
     return (
-    <div> 
-        <div> Title is {title} </div>
-        <div> Handle s {handle} </div>
+    <div className='card'> 
+    <div className='card-image'>
+        <figure className='image is-1by1'>
+            <img src={img} alt='pda logo'/>
+        </figure>
+    </div>
+        
+        <div className='card-content'>
+            <div className='media-content'>
+              <p className='title is-4'> {title} </p>
+              <p className='subtitle is-6'> {handle} </p>  
+              
+            </div>
+            <div className='content'>{description}</div>
+            
+        </div>
+        
     </div>
     );
 }
